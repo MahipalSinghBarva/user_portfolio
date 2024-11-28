@@ -1,0 +1,21 @@
+/* Custom CSS to style the progress bar */
+progress.progress-bar {
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  
+  progress.progress-bar::-webkit-progress-bar {
+    background-color: rgba(128, 0, 128, 0.386); 
+    border-radius: 0.25rem;
+  }
+  
+  progress.progress-bar::-webkit-progress-value {
+    background-color: rgb(145, 94, 255); 
+    border-radius: 0.25rem;
+  }
+  
+  progress.progress-bar::-moz-progress-bar {
+    background-color: rgb(145, 94, 255); 
+    border-radius: 0.25rem;
+  }
+  

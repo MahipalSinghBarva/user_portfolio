@@ -1,0 +1,87 @@
+/* projectdetails.css */
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.popup-content {
+    background-color: rgb(5, 8, 22);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 90%;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(232, 222, 222, 0.1);
+    position: relative;
+    max-height: 90%;
+    overflow-y: auto;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+/* Add this to your global CSS file */
+.popup-content::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5); /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Round edges */
+}
+
+.popup-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.7); /* Darker color on hover */
+}
+
+/* projectdetails.css */
+
+.fixed {
+    position: fixed;
+  }
+  
+  .inset-0 {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .bg-black {
+    background-color: black;
+  }
+  
+  .bg-opacity-50 {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .transition-opacity {
+    transition: opacity 0.3s ease;
+  }
+  
+  .transition-transform {
+    transition: transform 0.3s ease;
+  }
+  
+  .scale-100 {
+    transform: scale(1);
+  }
+  
+  .scale-95 {
+    transform: scale(0.95);
+  }
+  
+  .backdrop-blur-md {
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Make sure your button styles match your design */
+  

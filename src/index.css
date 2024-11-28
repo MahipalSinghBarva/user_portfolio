@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.project-details-main-div {
+  z-index: 99999;
+}
+
+.navbar-container {
+  background-color: rgba(50, 5, 50, 0.1);
+  backdrop-filter: blur(20px);
+}
+
+.tech-containor {
+  box-shadow: 5px 5px 10px rgba(70, 8, 93, 0.353) !important;
+}
+
+.about-card {
+  box-shadow: 20px 20px 100px rgba(67, 7, 89, 0.293) !important;
+
+}
