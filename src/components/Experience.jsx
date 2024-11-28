@@ -68,7 +68,7 @@ const Experience = () => {
     const fetchExp = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/v1/expernince/getall"
+          "https://servrer-portfolio.onrender.com/api/v1/expernince/getall"
         );
         const experienceData = response.data.expernince;
 

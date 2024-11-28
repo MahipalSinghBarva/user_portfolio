@@ -14,7 +14,7 @@ const Tech = () => {
     const getAllSkills = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:3000/api/v1/skill/getall"
+          "https://servrer-portfolio.onrender.com/api/v1/skill/getall"
         );
         setSkills(data.skill || []);
       } catch (error) {

@@ -80,7 +80,7 @@ const Works = () => {
     const getMyProjectDetails = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:3000/api/v1/project/getall"
+          "https://servrer-portfolio.onrender.com/api/v1/project/getall"
         );
         setProjects(data.projects || []);
       } catch (error) {

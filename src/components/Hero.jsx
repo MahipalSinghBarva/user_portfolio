@@ -15,7 +15,7 @@ const Hero = () => {
     const getMyProtfolio = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:3000/api/v1/user/portfolio/me"
+          "https://servrer-portfolio.onrender.com/api/v1/user/portfolio/me"
         );
         setUser(data.user || {});
       } catch (error) {
