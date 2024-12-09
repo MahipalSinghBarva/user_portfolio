@@ -1,78 +1,65 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
 import { styles } from "../style";
 import { EarthCanvas } from "../assets/canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
-import { useAlert } from 'react-alert';
+import { useAlert } from "react-alert";
+import axios from "axios";
 
 const Contact = () => {
-  const alert = useAlert()
+  const alert = useAlert();
   const formRef = useRef();
-  const [form, setForm] = useState({
-    name: "",
+
+  const [loading, setLoading] = useState(false);
+  const [send, setSend] = useState({
+    senderName: "",
     email: "",
     message: "",
   });
 
-  const [loading, setLoading] = useState(false);
-
-  const hendleChange = (e) => {
-    const { target } = e;
-    const { name, value } = target;
-
-    setForm({
-      ...form,
+  // Handle input change
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setSend({
+      ...send,
       [name]: value,
     });
   };
 
-  const handleSubmit = (e) => {
+  // Handle form submission
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    
 
-    emailjs
-      .send(
-        "service_m7lsxli",
-        "template_ruvc6uf",
-        {
-          from_name: form.name,
-          to_name: "Mahipal Singh",
-          from_email: form.email,
-          to_email: "mahipalsingh450@gmail.com",
-          message: form.message,
-        },
-        "8_IeQajF_H9VsR6wR"
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert.success("Thank you. I will get back to you as soon as possible.");
-
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
-
-          alert.error("Ahh, something went wrong. Please try again.");
-        }
+    try {
+      const response = await axios.post(
+        "http://localhost:3000/api/v1/message/send",
+        send
       );
+
+      setLoading(false);
+      alert.success("Thank you! Your message has been sent successfully.");
+
+      // Clear form after successful submission
+      setSend({
+        senderName: "",
+        email: "",
+        message: "",
+      });
+    } catch (error) {
+      setLoading(false);
+      console.error("Error while sending message:", error);
+      alert.error("Oops! Something went wrong. Please try again.");
+    }
   };
 
   return (
-    <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden `}
-    >
+    <div className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
+      {/* Form Section */}
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[0.75] bg-black-100 p-8 rounded-lg "
+        className="flex-[0.75] bg-black-100 p-8 rounded-lg"
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -86,32 +73,34 @@ const Contact = () => {
             <span className="text-white font-medium mb-4">Your Name</span>
             <input
               type="text"
-              name="name"
-              value={form.name}
-              onChange={hendleChange}
+              name="senderName"
+              value={send.senderName}
+              onChange={handleChange}
               placeholder="What's your good name?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
+
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your email</span>
+            <span className="text-white font-medium mb-4">Your Email</span>
             <input
               type="email"
               name="email"
-              value={form.email}
-              onChange={hendleChange}
-              placeholder="What's your web address?"
+              value={send.email}
+              onChange={handleChange}
+              placeholder="What's your email?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
+
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Message</span>
             <textarea
               rows={7}
               name="message"
-              value={form.message}
-              onChange={hendleChange}
-              placeholder="What you want to say?"
+              value={send.message}
+              onChange={handleChange}
+              placeholder="What would you like to say?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
@@ -125,6 +114,7 @@ const Contact = () => {
         </form>
       </motion.div>
 
+      {/* Canvas Section */}
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
