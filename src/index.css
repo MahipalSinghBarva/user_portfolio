@@ -2,6 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+.hero-main {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
+    url(./assets/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  background-attachment: fixed;
+  opacity: 0.5;
+  filter: blur(8px);
+  width: 100vw;
+  height: 100vh;
+}
+
+
+/* .hero-main::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 20% 20%,
+    rgba(145, 94, 255, 0.15),
+    transparent 70%
+  );
+  mix-blend-mode: screen;
+  pointer-events: none;
+} */
+
 .project-details-main-div {
   z-index: 99999;
 }
@@ -17,5 +44,4 @@
 
 .about-card {
   box-shadow: 20px 20px 100px rgba(67, 7, 89, 0.293) !important;
-
 }

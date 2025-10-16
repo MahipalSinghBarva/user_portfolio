@@ -9,10 +9,10 @@ import axios from "axios";
 
 const ServiceCard = ({ index, title, icon}) => {
   return (
-    <Tilt className="xs:w-[250px] w-full">
+    <Tilt className="xs:w-[370px] w-full">
       <motion.div
         variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-        className="w-full green-pink-gradient p-[1px] rounded-[20px]  about-card"
+        className="w-full green-pink-gradient p-[1px] rounded-[10px]  about-card"
       >
         <div
           options={{
@@ -25,7 +25,7 @@ const ServiceCard = ({ index, title, icon}) => {
           <img
             src={icon}
             alt="web-development"
-            className="w-16 h-16 object-contain"
+            className="w-20 h-20 object-contain"
           />
 
           <h3 className="text-white text-[20px] font-bold text-center">
@@ -56,6 +56,7 @@ const About = () => {
   }, []);
   return (
     <>
+     
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>

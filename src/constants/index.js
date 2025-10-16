@@ -29,10 +29,14 @@ import {
   bpcllogo,
   finance,
   Fevoff,
+  CPP,
+  CYBER,
+  PY,
+  AI,
+  FULLSTACK
 } from "../assets";
 
 export const navLinks = [
-  
   {
     id: "about",
     title: "About",
@@ -57,8 +61,24 @@ const services = [
     icon: javascript,
   },
   {
-    title: "Full Stack MERN Developer",
-    icon: backend,
+    title: "Python",
+    icon: PY,
+  },
+  {
+    title: "C/C++",
+    icon: CPP,
+  },
+  {
+    title: "Full Stack Developer",
+    icon: FULLSTACK,
+  },
+  {
+    title: "Cyber Security",
+    icon: CYBER,
+  },
+  {
+    title: "AI/ML Engineer",
+    icon: AI,
   },
   {
     title: "Data Structures and Algorithms",
@@ -183,10 +203,10 @@ const experiences = [
     date: "April 2022 - July 2023",
     points: [
       "Handled 23 Branches and 7 people of team members",
-      "Mentor and guide the sales team to meet the organization requirements.", 
-      "Analyze business trends and sales figures to formulate new strategies.", 
+      "Mentor and guide the sales team to meet the organization requirements.",
+      "Analyze business trends and sales figures to formulate new strategies.",
       "Initiate innovative promotional schemes to enhance visibility of BIL & PL in bank branches.",
-      "Recommend modifications to current product and processes."
+      "Recommend modifications to current product and processes.",
     ],
   },
   {
@@ -197,10 +217,10 @@ const experiences = [
     date: "April 2022 - July 2023",
     points: [
       "Handled 23 Branches and 7 people of team members",
-      "Mentor and guide the sales team to meet the organization requirements.", 
-      "Analyze business trends and sales figures to formulate new strategies.", 
+      "Mentor and guide the sales team to meet the organization requirements.",
+      "Analyze business trends and sales figures to formulate new strategies.",
       "Initiate innovative promotional schemes to enhance visibility of BIL & PL in bank branches.",
-      "Recommend modifications to current product and processes."
+      "Recommend modifications to current product and processes.",
     ],
   },
   {
@@ -264,7 +284,7 @@ const projects = [
     ],
     image: Fevoff,
     source_code_link: "https://github.com/MahipalSinghBarva/Fevoff_MERNStack",
-    project_link:"https://fevoff.vercel.app/"
+    project_link: "https://fevoff.vercel.app/",
   },
   {
     name: "Olivia_EStore",
@@ -286,7 +306,7 @@ const projects = [
     ],
     image: oliviaestore,
     source_code_link: "https://github.com/MahipalSinghBarva/Olivia_EStore_MERN",
-    project_link:"https://olivia-estore.netlify.app/"
+    project_link: "https://olivia-estore.netlify.app/",
   },
   {
     name: "Estate_Deck",
@@ -308,7 +328,7 @@ const projects = [
     ],
     image: estatedeck,
     source_code_link: "https://github.com/MahipalSinghBarva/estatedeck",
-    project_link:"https://estatedeck.pages.dev/"
+    project_link: "https://estatedeck.pages.dev/",
   },
   {
     name: "ShowTime",
@@ -330,7 +350,7 @@ const projects = [
     ],
     image: showtime,
     source_code_link: "https://github.com/MahipalSinghBarva/showtime",
-    project_link:"https://my-showtime.netlify.app/"
+    project_link: "https://my-showtime.netlify.app/",
   },
   {
     name: "Youtube_Clone",
@@ -352,7 +372,7 @@ const projects = [
     ],
     image: youtube,
     source_code_link: "https://github.com/MahipalSinghBarva/youtubeClone",
-    project_link:"https://youtubeclone-by-mahipalsingh.netlify.app/"
+    project_link: "https://youtubeclone-by-mahipalsingh.netlify.app/",
   },
 ];
 

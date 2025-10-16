@@ -26,15 +26,21 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
-import oliviaestore from "./oliviaestore.png"
+import oliviaestore from "./oliviaestore.png";
 import estatedeck from "./estatedeck.png";
 import showtime from "./showtime.png";
-import youtube from "./Youtube.png"
-import icicilogo from "./icicilogo.png"
-import bfllogo from "./bfllgog.png"
-import bpcllogo from "./bpcllogo.png" 
-import finance from "./finance.png"
-import Fevoff from "./Fevoff.png"
+import youtube from "./Youtube.png";
+import icicilogo from "./icicilogo.png";
+import bfllogo from "./bfllgog.png";
+import bpcllogo from "./bpcllogo.png";
+import finance from "./finance.png";
+import Fevoff from "./Fevoff.png";
+import CPP from "./tech/cpp.jpg";
+import PY from "./tech/py.png";
+import AI from "./tech/ai.png";
+import CYBER from "./tech/cyber.jpg";
+import FULLSTACK from "./fullstack.png";
+
 
 export {
   logo,
@@ -70,5 +76,10 @@ export {
   bfllogo,
   bpcllogo,
   finance,
-  Fevoff
+  Fevoff,
+  CYBER,
+  AI,
+  PY,
+  CPP,
+  FULLSTACK
 };
